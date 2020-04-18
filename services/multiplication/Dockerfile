@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 #expose the app port
-EXPOSE 8080
+EXPOSE 8008
 
 #default exec when image is started 
 CMD [ "npm", "start"]
