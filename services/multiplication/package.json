@@ -1,0 +1,27 @@
+{
+  "name": "multiplication-service",
+  "version": "1.0.0",
+  "description": "Simple service to multiply two integers",
+  "main": "multiplication.js",
+  "scripts": {
+    "start": "node multiplication.js",
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumitoma/mono-calc.git"
+  },
+  "author": "sumitoma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumitoma/mono-calc/issues"
+  },
+  "homepage": "https://github.com/sumitoma/mono-calc#readme",
+  "devDependencies": {
+    "mocha": "^7.1.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
