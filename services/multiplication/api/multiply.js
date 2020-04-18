@@ -14,10 +14,16 @@ function addCall(result, x){
    });  
 }
 
+async function add(result, x){
+    const url = `http://${addServiceHost}:${addServicePort}/add?x=${result}&y=${x}`;
+    const response = await axios.get(url);
+    return response.data.result;
+}
+
 module.exports = async function multiply(x, y){
     let result = 0;
     for(i=1;i<=y;i++){
-        result = await addCall(result, x);
+        result = await add(result, x);
     }
     return result;
 }
