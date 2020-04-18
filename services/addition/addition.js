@@ -19,7 +19,9 @@ app.get('/add', (req, res)=>{
             res.sendStatus(STATUS.BAD_REQUEST);
         } else {
             let result = add(Number(x), Number(y));
-            res.send("x + y = "+ result);
+            res.send({
+                result: result
+            });
         }
     } else {
         res.sendStatus(STATUS.BAD_REQUEST);
@@ -32,3 +34,4 @@ app.listen(8080, ()=>{
 });
 
 module.exports = app;
+

@@ -21,8 +21,10 @@ app.get('/multiply', (req, res)=>{
             x = Number(x);
             y = Number(y);
             if(Number.isInteger(x) && Number.isInteger(y)){
-                let result = multiply(x, y);
-                res.send("x * y = "+ result);
+                multiply(x, y).then((response)=>{
+                    result = response;
+                    res.send("x * y = "+ result);
+                });
             } else {
                 res.sendStatus(STATUS.BAD_REQUEST);
             }
@@ -33,8 +35,8 @@ app.get('/multiply', (req, res)=>{
 });
 
 
-app.listen(8080, ()=>{
-    console.log("multiplication service is listening on port 8080");
+app.listen(8008, ()=>{
+    console.log("multiplication service is listening on port 8008");
 });
 
 module.exports = app;
